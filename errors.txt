@@ -1,0 +1,26 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/a3s1.rpy", line 1111: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    d "\"Cam!{w=0.3} BRIAN!\" with vpunch
+    "A voz de Devon está muito perto, talvez apenas um túnel ou dois de distância."
+      ^
+    "Brian murmura baixinho ao ouvido de Cameron."
+    b "\"Cala a porra da boca agora, ou eu oblitero seu outro rim, entendeu?\""
+
+File "game/music_room/music_room.rpy", line 443: 'music_bar' is not a keyword argument or valid child of the hbox statement.
+    music_bar room mr
+             ^
+
+File "game/music_room/music_room.rpy", line 696: 'music_bar' is not a keyword argument or valid child of the hbox statement.
+    music_bar room mr
+             ^
+
+File "game/music_room/music_room.rpy", line 879: 'music_bar' is not a keyword argument or valid child of the hbox statement.
+    music_bar room mr
+             ^
+
+Ren'Py Version: Ren'Py 8.3.2.24090902
+Thu Aug  7 02:01:23 2025
