@@ -311,7 +311,7 @@ window show
 "Cameron suspira quando Brian o agarra pela orelha."
 c "\"Não, não! Pare, eu posso andar com você.\""
 c "\"Eu não vou tentar correr--{w=0.4}{nw}"
-extend" AI!\" with vpunch
+extend" AI!\"" with vpunch
 "Cameron sente a diversão do urso com seu medo de ser puxado pela orelha novamente, e o coiote rapidamente suplica, percebendo que isso pode desviar os interesses de Brian de usar Cameron para tortura em vez de suas habilidades."
 "A dor foi cegante, mas não é nada, absolutamente nada comparado ao que este urso fez com os outros."
 "Cameron consegue se acomodar em uma caminhada tropeçando enquanto Brian o puxa, curvado e tentando ver o chão no escuro, enquanto tenta seguir cuidadosamente os movimentos brutos e imprevisíveis do urso."
@@ -1108,7 +1108,7 @@ show bri neutral red with dis
 hide bri with dissolve
 "Cameron solta um grito rouco e sem fôlego enquanto seu corpo dolorido é forçado a se mover novamente."
 "Ecoa ao redor deles antes de ser interrompido quando um braço enorme aperta a garganta de Cameron."
-d "\"Cam!{w=0.3} BRIAN!\" with vpunch
+d "\"Cam!{w=0.3} BRIAN!\"" with vpunch
 "A voz de Devon está muito perto, talvez apenas um túnel ou dois de distância."
 "Brian murmura baixinho ao ouvido de Cameron."
 b "\"Cala a porra da boca agora, ou eu oblitero seu outro rim, entendeu?\""

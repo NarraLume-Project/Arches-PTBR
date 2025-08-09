@@ -161,7 +161,7 @@ d "\"O quê!?\""
 c "\"Você armou isso? Para me fazer acreditar, ou algo assim...\""
 d "\"O quê? {w=0.3}Como eu faria isso?\""
 c "\"Alto-falantes, {w=0.3}ou fantasias, {w=0.5}eu não sei--{w=0.5}{nw}"
-extend "AI! {w=0.4}Você está me machucando!\" with vpunch
+extend "AI! {w=0.4}Você está me machucando!\"" with vpunch
 window hide
 scene bg motel_room_abandoned_2 with leftwipe
 window show
