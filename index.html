@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arches PT-BR</title>
+<title>Arches PT-BR / EN</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -20,6 +20,7 @@
         background: url('https://img.itch.zone/aW1hZ2UvMTAwNzAyMC83NzI4OTI0LnBuZw==/original/MSCBPV.png') center/cover no-repeat;
         padding: 100px 20px;
         text-align: center;
+        position: relative;
     }
 
     header h1 {
@@ -56,6 +57,27 @@
     }
 
     .buttons a:hover {
+        background: #ff1f34;
+    }
+
+    .lang-switch {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .lang-switch button {
+        background: #ff4f5e;
+        border: none;
+        color: white;
+        padding: 6px 12px;
+        margin-left: 5px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    .lang-switch button:hover {
         background: #ff1f34;
     }
 
@@ -99,39 +121,99 @@
 </head>
 <body>
     <header>
-        <h1>Arches PT-BR</h1>
-        <p>Tradução não oficial para o visual novel Arches, criada por fãs e para fãs, totalmente gratuita e sem fins lucrativos.</p>
+        <div class="lang-switch">
+            <button onclick="setLang('pt')">🇧🇷 PT</button>
+            <button onclick="setLang('en')">🇺🇸 EN</button>
+        </div>
+        <h1 id="title">Arches PT-BR</h1>
+        <p id="subtitle">Tradução não oficial para o visual novel Arches, criada por fãs e para fãs, totalmente gratuita e sem fins lucrativos.</p>
         <div class="buttons">
-            <a href="https://github.com/NarraLume-Project/Arches-PTBR/archive/refs/heads/main.zip">📥 Baixar Tradução</a>
-            <a href="https://github.com/NarraLume-Project/Arches-PTBR">📂 Ver no GitHub</a>
-            <a href="https://raw.githubusercontent.com/NarraLume-Project/Arches-PTBR/main/arquivosTL.zip">📥 Baixar arquivo TL de tradução</a>
+            <a id="btn-download" href="https://github.com/NarraLume-Project/Arches-PTBR/archive/refs/heads/main.zip">📥 Baixar Tradução</a>
+            <a id="btn-github" href="https://github.com/NarraLume-Project/Arches-PTBR">📂 Ver no GitHub</a>
+            <a id="btn-tl" href="https://raw.githubusercontent.com/NarraLume-Project/Arches-PTBR/main/arquivosTL.zip">📥 Baixar arquivo TL de tradução</a>
         </div>
     </header>
 
     <main>
-        <h2>Sobre o Projeto</h2>
-        <p>
+        <h2 id="about-title">Sobre o Projeto</h2>
+        <p id="about-text">
             Esta é a tradução em português brasileiro do visual novel <strong>Arches</strong>, desenvolvida pela comunidade NarraLume Project.
             Nosso foco é preservar o clima, tom e emoção da obra original, permitindo que mais jogadores possam vivenciar essa experiência única.
-
-            Para instalar a tradução via TL, você vai baixar o Jogo normalmente, extrair e pegar a pasta " portuguese " e colocar dentro da pasta game/tl. 
-            Para saber se vc está na pasta correta, terá uma pasta " None " junto . E o arquivo " screen.py " vc deve colocar na pasta game/ e apertar em substituir.
+            <br><br>
+            Para instalar a tradução via TL, você vai baixar o jogo normalmente, extrair e pegar a pasta "portuguese" e colocar dentro da pasta game/tl. 
+            Para saber se você está na pasta correta, haverá uma pasta "None" junto. E o arquivo "screen.py" você deve colocar na pasta game/ e substituir.
         </p>
 
-        <h2>Capturas de Tela</h2>
+        <h2 id="screenshots-title">Capturas de Tela</h2>
         <div class="gallery">
             <img src="https://img.itch.zone/aW1hZ2UvMTAwNzAyMC81NzM2MDgyLnBuZw==/original/zra4tt.png" alt="Screenshot 1">
             <img src="https://img.itch.zone/aW1hZ2UvMTAwNzAyMC81NzM2MDg0LnBuZw==/original/Rs3trx.png" alt="Screenshot 2">
             <img src="https://img.itch.zone/aW1hZ2UvMTAwNzAyMC83NzI4OTM4LmpwZw==/original/5a7Syr.jpg" alt="Screenshot 3">
         </div>
 
-        <h2>Créditos</h2>
-        <p>Tradução: Equipe NarraLume Project</p>
-        <p>Baseado no jogo original desenvolvido por <a href="https://echoproject.itch.io/arches" target="_blank" style="color:#ff4f5e;">Echo Project</a></p>
+        <h2 id="credits-title">Créditos</h2>
+        <p id="credits-text">Tradução: Equipe NarraLume Project</p>
+        <p id="credits-base">Baseado no jogo original desenvolvido por <a href="https://echoproject.itch.io/arches" target="_blank" style="color:#ff4f5e;">Echo Project</a></p>
     </main>
 
-    <footer>
+    <footer id="footer">
         &copy; 2025 NarraLume Project - Conteúdo para fins não comerciais
     </footer>
+
+<script>
+const translations = {
+    pt: {
+        title: "Arches PT-BR",
+        subtitle: "Tradução não oficial para o visual novel Arches, criada por fãs e para fãs, totalmente gratuita e sem fins lucrativos.",
+        btnDownload: "📥 Baixar Tradução",
+        btnGithub: "📂 Ver no GitHub",
+        btnTL: "📥 Baixar arquivo TL de tradução",
+        aboutTitle: "Sobre o Projeto",
+        aboutText: `Esta é a tradução em português brasileiro do visual novel <strong>Arches</strong>, desenvolvida pela comunidade NarraLume Project.
+        Nosso foco é preservar o clima, tom e emoção da obra original, permitindo que mais jogadores possam vivenciar essa experiência única.
+        <br><br>
+        Para instalar a tradução via TL, você vai baixar o jogo normalmente, extrair e pegar a pasta "portuguese" e colocar dentro da pasta game/tl. 
+        Para saber se você está na pasta correta, haverá uma pasta "None" junto. E o arquivo "screen.py" você deve colocar na pasta game/ e substituir.`,
+        screenshotsTitle: "Capturas de Tela",
+        creditsTitle: "Créditos",
+        creditsText: "Tradução: Equipe NarraLume Project",
+        creditsBase: `Baseado no jogo original desenvolvido por <a href="https://echoproject.itch.io/arches" target="_blank" style="color:#ff4f5e;">Echo Project</a>`,
+        footer: "&copy; 2025 NarraLume Project - Conteúdo para fins não comerciais"
+    },
+    en: {
+        title: "Arches EN",
+        subtitle: "Unofficial translation of the visual novel Arches, made by fans for fans, completely free and non-profit.",
+        btnDownload: "📥 Download Translation",
+        btnGithub: "📂 View on GitHub",
+        btnTL: "📥 Download TL translation file",
+        aboutTitle: "About the Project",
+        aboutText: `This is the Brazilian Portuguese translation of the visual novel <strong>Arches</strong>, developed by the NarraLume Project community.
+        Our focus is to preserve the atmosphere, tone, and emotion of the original work, allowing more players to experience this unique story.
+        <br><br>
+        To install the translation via TL, download the game normally, extract it, take the "portuguese" folder and place it inside the game/tl folder. 
+        To know if you are in the correct folder, there will be a "None" folder next to it. The "screen.py" file must be placed in the game/ folder and replaced.`,
+        screenshotsTitle: "Screenshots",
+        creditsTitle: "Credits",
+        creditsText: "Translation: NarraLume Project Team",
+        creditsBase: `Based on the original game developed by <a href="https://echoproject.itch.io/arches" target="_blank" style="color:#ff4f5e;">Echo Project</a>`,
+        footer: "&copy; 2025 NarraLume Project - Content for non-commercial purposes"
+    }
+};
+
+function setLang(lang) {
+    document.getElementById("title").innerHTML = translations[lang].title;
+    document.getElementById("subtitle").innerHTML = translations[lang].subtitle;
+    document.getElementById("btn-download").innerHTML = translations[lang].btnDownload;
+    document.getElementById("btn-github").innerHTML = translations[lang].btnGithub;
+    document.getElementById("btn-tl").innerHTML = translations[lang].btnTL;
+    document.getElementById("about-title").innerHTML = translations[lang].aboutTitle;
+    document.getElementById("about-text").innerHTML = translations[lang].aboutText;
+    document.getElementById("screenshots-title").innerHTML = translations[lang].screenshotsTitle;
+    document.getElementById("credits-title").innerHTML = translations[lang].creditsTitle;
+    document.getElementById("credits-text").innerHTML = translations[lang].creditsText;
+    document.getElementById("credits-base").innerHTML = translations[lang].creditsBase;
+    document.getElementById("footer").innerHTML = translations[lang].footer;
+}
+</script>
 </body>
 </html>
